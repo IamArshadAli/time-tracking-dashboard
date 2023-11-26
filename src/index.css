@@ -3,3 +3,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --very-dark-blue: hsl(226, 43%, 10%);
+}
+
+@layer base {
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--very-dark-blue);
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    font-family: Rubik, sans-serif;
+  }
+
+  @media screen and (min-width: 541px) {
+    body {
+      align-items: center;
+    }
+  }
+}
+
+@layer components {
+  .main {
+    @apply mx-auto flex flex-col gap-8 px-6 py-12 md:items-center lg:max-w-[69.5rem] lg:flex-row lg:gap-8 lg:px-0 lg:py-0
+  }
+
+  .main__profile {
+    @apply flex flex-col md:flex-row lg:flex-col w-full max-w-sm overflow-hidden rounded-2xl bg-DarkBlue md:max-w-2xl lg:max-w-[15.70rem]
+  }
+
+  .main__profile__info {
+    @apply flex items-center justify-start gap-6 rounded-2xl bg-Blue p-8 lg:flex-col lg:items-start lg:gap-10 lg:px-7 lg:pb-[5.1rem] lg:pt-9
+  }
+
+  .profile__info__image {
+    @apply w-16 rounded-full outline outline-white lg:w-20
+  }
+
+  .profile__info__report {
+    @apply text-PaleBlue
+  }
+
+  .profile__info__name {
+    @apply text-2xl font-light leading-[2.9rem] text-white lg:text-[2.5rem]
+  }
+
+  .main__profile__nav {
+    @apply flex justify-between px-8 py-6 md:flex-col lg:items-start lg:gap-[.9rem]
+  }
+
+  .profile__nav__button {
+    @apply text-lg font-light capitalize hover:text-white
+  }
+
+  .main__stats {
+    @apply flex flex-col flex-wrap justify-center gap-6 md:flex-row lg:gap-7
+  }
+
+  .stats__card {
+    @apply relative w-full max-w-sm overflow-hidden rounded-2xl md:max-w-xs lg:max-w-[16rem]
+  }
+
+  .stats__section {
+    @apply mt-10 flex cursor-pointer flex-col justify-between rounded-2xl bg-DarkBlue p-6 hover:bg-DesaturatedBlue lg:mt-11 lg:px-8
+  }
+
+  .stats__header {
+    @apply flex flex-1 items-center justify-between
+  }
+
+  .stats__header__title {
+    @apply text-lg font-medium text-white
+  }
+
+  .stats__header__icon {
+    @apply h-1 w-5
+  }
+
+  .stats__data {
+    @apply mb-1 flex flex-1 items-center justify-between lg:mt-2 lg:flex-col lg:items-start
+  }
+
+  .stats__data__current {
+    @apply text-[2rem] font-light text-white lg:mt-1 lg:text-[3.5rem]
+  }
+
+  .stats__data__previous {
+    @apply text-[.95rem] font-normal text-PaleBlue
+  }
+}
