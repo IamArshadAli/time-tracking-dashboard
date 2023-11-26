@@ -33,7 +33,7 @@ const ReportCard = ({ report }) => {
           <div className="stats__section">
             <div className="stats__header">
               <h4 className="stats__header__title">{item.title}</h4>
-              <img src={ellipsisIcon} className="stats__header__icon" />
+              <img src={ellipsisIcon} className="stats__header__icon" alt="ellipsis" />
             </div>
             <div className="stats__data">
               <h4 className="stats__data__current">
