@@ -24,7 +24,7 @@ const ReportCard = ({ report }) => {
           key={index}
           className="stats__card"
           style={{
-            backgroundImage: `url(${icons[index + 1]})`,
+            backgroundImage: `url("${icons[index + 1]}")`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "calc(100% - 18px) -8px",
             backgroundColor: iconBG[index + 1],
@@ -33,7 +33,11 @@ const ReportCard = ({ report }) => {
           <div className="stats__section">
             <div className="stats__header">
               <h4 className="stats__header__title">{item.title}</h4>
-              <img src={ellipsisIcon} className="stats__header__icon" alt="ellipsis" />
+              <img
+                src={ellipsisIcon}
+                className="stats__header__icon"
+                alt="ellipsis"
+              />
             </div>
             <div className="stats__data">
               <h4 className="stats__data__current">
